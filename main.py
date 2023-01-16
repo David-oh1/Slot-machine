@@ -83,7 +83,7 @@ def deposit():
 
     return amount
 
-
+#asks user how many lines to bet with; checks to make sure that input number is between 1 and 3 and no string is entered
 def GetNumOfLines():
     while True:
         lines = input("Enter the number of lines to bet on: (1-" + str(MAX_LINES) + ")? ")
@@ -99,7 +99,7 @@ def GetNumOfLines():
    
     return lines
 
-
+#asks user for bet amount and stores it
 def get_bet():
     while True:
         bet = input("How much would you like to bet on each line? $ ")
@@ -114,7 +114,7 @@ def get_bet():
             print("Please enter a number.")
     return bet
 
-
+#ask for betting amount; checks to see if input amount is valid
 def spin(balance):
     lines = GetNumOfLines()
     while True:
@@ -137,7 +137,7 @@ def spin(balance):
 
 
 
-
+#will conintually ask to play unless user inputs q
 def main():
     balance = deposit()
     while True:
